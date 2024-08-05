@@ -1,0 +1,444 @@
+.directory {
+  width: 75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+
+  .directory-item {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    border: 0.1rem solid $colorG;
+    border-radius: 0.6rem;
+    margin: 0 0.25rem 0.5rem 0.25rem;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+
+      & .directory-item-image {
+        transform: scale(1.1);
+        transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      }
+
+      & .directory-item-container {
+        opacity: 0.9;
+      }
+    }
+
+    .directory-item-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+    }
+
+    .directory-item-container {
+      width: 7rem;
+      height: 5rem;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      border: 0.1rem solid $colorG;
+      border-radius: 0.3rem;
+      background-color: $colorF;
+      padding: 0 1.5rem;
+      opacity: 0.7;
+      position: absolute;
+      z-index: 10;
+
+      h1 {
+        color: $colorH;
+        font-family: $openSansCondensedLight;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: $colorH;
+        font-family: $openSansCondensedLight;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+
+  .category-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+
+    .category-title {
+      h1 {
+        color: $colorF;
+        font-family: $openSansCondensedLight;
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+
+      a {
+        color: $colorF;
+        font-family: $openSansCondensedLight;
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .category-list {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+  }
+}
+
+.product {
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: row wrap;
+  position: relative;
+  margin: 1rem;
+
+  .product-icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    z-index: 5;
+  }
+
+  .product-container {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    z-index: 10;
+
+    .name {
+      color: $colorF;
+      font-family: $openSansCondensedLight;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+    .price {
+      color: $colorF;
+      font-family: $openSansCondensedLight;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.cart-dropdown {
+  width: 20rem;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  background-color: $colorF;
+  border: 0.1rem solid $colorG;
+  border-radius: 0.3rem;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  padding: 1rem;
+
+  .cart-dropdown-items {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column;
+    overflow-y: scroll;
+
+    .cart-item {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: 0.5rem 0;
+
+      .cart-item-icon {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 0.3rem;
+      }
+
+      .cart-item-container {
+        width: 10rem;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+
+        .name {
+          color: $colorG;
+          font-family: $openSansCondensedLight;
+          font-weight: bold;
+          font-size: 1.25rem;
+          padding: 0.5rem 0;
+        }
+
+        .price {
+          color: $colorG;
+          font-family: $openSansCondensedLight;
+          font-weight: bold;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .empty-message {
+      color: $colorG;
+      font-family: $openSansCondensedLight;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.checkout-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0.5rem 0;
+
+  .checkout-item-icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 23%;
+    height: 10rem;
+    border-radius: 0.3rem;
+  }
+
+  .checkout-item-container {
+    width: 77%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .name,
+    .quantity,
+    .price {
+      width: 30%;
+    }
+
+    .name {
+      h1 {
+        color: $colorG;
+        font-family: $openSansCondensedLight;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    }
+
+    .quantity {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .arrow {
+        cursor: pointer;
+        color: $colorG;
+        font-family: $openSansCondensedLight;
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+
+      .value {
+        margin: 0 0.5rem;
+
+        h1 {
+          color: $colorG;
+          font-family: $openSansCondensedLight;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .remove {
+      padding: 0 0 0 3rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.sign-in,
+.sign-up {
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  margin: 0 2.5rem;
+
+  h1,
+  h3 {
+    color: $colorG;
+    font-family: $openSansCondensedLight;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin shrinkLabel {
+  top: -1.25rem;
+  font-size: 1rem;
+  color: $colorG;
+}
+
+.form {
+  position: relative;
+  margin: 2.5rem 0;
+
+  .form-input {
+    color: $colorH;
+    font-family: $openSansCondensedLight;
+    font-size: 1.5rem;
+    background-color: $colorF;
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-label {
+      @include shrinkLabel();
+    }
+  }
+
+  input[type="password"] {
+    letter-spacing: 0.3rem;
+  }
+
+  .form-label {
+    color: $colorH;
+    font-family: $openSansCondensedLight;
+    font-size: 1.25rem;
+    position: absolute;
+    left: 0.3rem;
+    top: 0.9rem;
+    transition: 300ms ease all;
+    pointer-events: none;
+
+    &.shrink {
+      @include shrinkLabel();
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1rem 0;
+  z-index: 15;
+
+  .btn {
+    cursor: pointer;
+    min-width: 10rem;
+    width: auto;
+    height: 3.5rem;
+    color: $colorF;
+    font-family: $openSansCondensedLight;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    background-color: $colorG;
+    border: 0.1rem solid $colorF;
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    &:hover {
+      color: $colorG;
+      background-color: $colorF;
+      border: 0.1rem solid $colorG;
+    }
+
+    &.google-sign-in {
+      color: $colorF;
+      background-color: $colorB;
+
+      &:hover {
+        background-color: $colorE;
+        border: 0.1rem solid $colorF;
+      }
+    }
+
+    &.inverted {
+      color: $colorG;
+      background-color: $colorF;
+      border: 0.1rem solid $colorG;
+
+      &:hover {
+        color: $colorF;
+        background-color: $colorG;
+        border: 0.1rem solid $colorF;
+      }
+    }
+  }
+}
